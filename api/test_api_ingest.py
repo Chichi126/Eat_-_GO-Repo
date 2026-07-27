@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime, timezone
 
-from pipeline.api_ingest import (
+from Eat_N_GO_Ass.api.api_ingest import (
     ApiSourceConfig,
     fetch_records_for_interval,
     nested_value,

@@ -1,0 +1,57 @@
+{
+  "customers": {
+    "customer_id": "VARCHAR",
+    "signup_date": "DATE",
+    "city": "VARCHAR",
+    "phone": "VARCHAR",
+    "is_business": "BIGINT"
+  },
+  "stores": {
+    "store_id": "VARCHAR",
+    "store_name": "VARCHAR",
+    "city": "VARCHAR",
+    "opening_hours": "VARCHAR",
+    "delivery_sla_minutes": "BIGINT"
+  },
+  "products": {
+    "product_id": "VARCHAR",
+    "product_name": "VARCHAR",
+    "category": "VARCHAR",
+    "base_price_ngn": "BIGINT"
+  },
+  "orders": {
+    "order_id": "VARCHAR",
+    "order_ts": "TIMESTAMP",
+    "store_id": "VARCHAR",
+    "customer_id": "VARCHAR",
+    "channel": "VARCHAR",
+    "payment_method": "VARCHAR",
+    "promo_code": "VARCHAR",
+    "items_count": "BIGINT",
+    "qty_total": "BIGINT",
+    "subtotal_ngn": "DOUBLE",
+    "discount_ngn": "DOUBLE",
+    "tax_ngn": "DOUBLE",
+    "delivery_fee_ngn": "BIGINT",
+    "total_amount_ngn": "DOUBLE",
+    "promised_delivery_minutes": "BIGINT",
+    "actual_delivery_minutes": "BIGINT"
+  },
+  "order_items": {
+    "order_id": "VARCHAR",
+    "product_id": "VARCHAR",
+    "product_name": "VARCHAR",
+    "category": "VARCHAR",
+    "qty": "BIGINT",
+    "unit_price_ngn": "DOUBLE",
+    "line_total_ngn": "DOUBLE"
+  },
+  "deliveries": {
+    "order_id": "VARCHAR",
+    "store_id": "VARCHAR",
+    "order_ts": "TIMESTAMP",
+    "promised_delivery_minutes": "BIGINT",
+    "actual_delivery_minutes": "BIGINT",
+    "delivered_within_sla": "BIGINT"
+  }
+}

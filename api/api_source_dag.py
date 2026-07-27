@@ -10,7 +10,7 @@ from common_pipeline import (
     warehouse_tasks,
 )
 
-from pipeline.api_ingest import DELIVERIES_API_CONFIG, run_api_extraction
+from Eat_N_GO_Ass.api.api_ingest import DELIVERIES_API_CONFIG, run_api_extraction
 from pipeline.audit import assert_audit_passed
 from pipeline.raw import run_raw_pipeline
 from pipeline.staging import run_staging_pipeline

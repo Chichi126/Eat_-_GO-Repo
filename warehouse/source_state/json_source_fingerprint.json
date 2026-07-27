@@ -1,39 +1,39 @@
 {
   "fingerprint": "09b6bc27eb2eac30a47061f1ee80bbb4c26b101f2e43ede330251b221435083e",
-  "source_path": "/app/dataSource",
+  "source_path": "/opt/airflow/dataSource",
   "files": [
     {
       "file": "customers.json",
-      "size_bytes": 291680,
-      "sha256": "a7282d4d5449365526fb4c061f4a36d0d370589e718aee854d1c263935fe5bfd"
+      "sha256": "a7282d4d5449365526fb4c061f4a36d0d370589e718aee854d1c263935fe5bfd",
+      "size_bytes": 291680
     },
     {
       "file": "stores.json",
-      "size_bytes": 1897,
-      "sha256": "b2f18e00bb6e19cea075d5bcf9cee1d96d8111f224cddc06fe3afeefcf4da412"
+      "sha256": "b2f18e00bb6e19cea075d5bcf9cee1d96d8111f224cddc06fe3afeefcf4da412",
+      "size_bytes": 1897
     },
     {
       "file": "products.json",
-      "size_bytes": 2873,
-      "sha256": "4add0213bfa406306483d5aac967ef731601b3adc98b93293e1a2bcb5b7fb715"
+      "sha256": "4add0213bfa406306483d5aac967ef731601b3adc98b93293e1a2bcb5b7fb715",
+      "size_bytes": 2873
     },
     {
       "file": "orders.json",
-      "size_bytes": 464376,
-      "sha256": "3785ba69bdf9bb9f66e2561ffe3ef3e906605f99668cff18da1ee4dccfc5e6b2"
+      "sha256": "3785ba69bdf9bb9f66e2561ffe3ef3e906605f99668cff18da1ee4dccfc5e6b2",
+      "size_bytes": 464376
     },
     {
       "file": "order_items.json",
-      "size_bytes": 333544,
-      "sha256": "cb2210ff57d3c4ad4912bdfee399b0cfe2353e7ff4ec3c5958d588f316414d53"
+      "sha256": "cb2210ff57d3c4ad4912bdfee399b0cfe2353e7ff4ec3c5958d588f316414d53",
+      "size_bytes": 333544
     },
     {
       "file": "deliveries.json",
-      "size_bytes": 91256,
-      "sha256": "de810b900a51c33e5cbdd22d4a51706624dcc23febfa305f1e5fd1cf74baabfd"
+      "sha256": "de810b900a51c33e5cbdd22d4a51706624dcc23febfa305f1e5fd1cf74baabfd",
+      "size_bytes": 91256
     }
   ],
   "execution_date": "2026-07-27",
-  "run_id": "json-docker-2026-07-27",
-  "processed_at": "2026-07-26T23:39:27.671377+00:00"
+  "run_id": "manual__2026-07-27T17:01:45+00:00",
+  "processed_at": "2026-07-27T17:02:01.553601+00:00"
 }

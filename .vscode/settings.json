@@ -1,0 +1,25 @@
+{
+    "workbench.editorAssociations": {
+        "*.copilotmd": "vscode.markdown.preview.editor",
+        "*.parquet": "duckdb.dataFileViewer",
+        "*.csv": "duckdb.dataFileViewer",
+        "*.tsv": "duckdb.dataFileViewer",
+        "*.xlsx": "duckdb.dataFileViewer"
+    },
+    "sqltools.useNodeRuntime": true,
+    "duckdb.databases": [
+        {
+            "alias": "eat_go",
+            "type": "file",
+            "path": "/Users/user/Desktop/Eat_GO_Ass/eat_go.duckdb",
+            "attached": false
+        },
+        {
+            "alias": "eat",
+            "type": "file",
+            "path": "/Users/user/Desktop/Eat_GO_Ass/eat.duckdb",
+            "attached": false
+        }
+    ],
+    "duckdb.defaultDatabase": "eat_go"
+}

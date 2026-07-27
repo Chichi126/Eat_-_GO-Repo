@@ -1,0 +1,15 @@
+.env
+.DS_Store
+.env.example
+
+
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+logs/
+minio_store/
+
+*.duckdb
+*.duckdb.wal

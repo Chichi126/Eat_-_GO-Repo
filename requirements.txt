@@ -1,0 +1,10 @@
+duckdb
+faker
+fastapi
+httpx
+minio
+pytest
+python-dotenv
+python-multipart
+requests
+uvicorn

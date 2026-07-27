@@ -1,0 +1,146 @@
+[
+  {
+    "product_id": "P001",
+    "product_name": "Pizza 1",
+    "category": "Pizza",
+    "base_price_ngn": 3500
+  },
+  {
+    "product_id": "P002",
+    "product_name": "Dessert 2",
+    "category": "Dessert",
+    "base_price_ngn": 1200
+  },
+  {
+    "product_id": "P003",
+    "product_name": "Dessert 3",
+    "category": "Dessert",
+    "base_price_ngn": 1200
+  },
+  {
+    "product_id": "P004",
+    "product_name": "Dessert 4",
+    "category": "Dessert",
+    "base_price_ngn": 1200
+  },
+  {
+    "product_id": "P005",
+    "product_name": "Sides 5",
+    "category": "Sides",
+    "base_price_ngn": 1500
+  },
+  {
+    "product_id": "P006",
+    "product_name": "Sides 6",
+    "category": "Sides",
+    "base_price_ngn": 2000
+  },
+  {
+    "product_id": "P007",
+    "product_name": "Dessert 7",
+    "category": "Dessert",
+    "base_price_ngn": 1000
+  },
+  {
+    "product_id": "P008",
+    "product_name": "Pizza 8",
+    "category": "Pizza",
+    "base_price_ngn": 4000
+  },
+  {
+    "product_id": "P009",
+    "product_name": "Sides 9",
+    "category": "Sides",
+    "base_price_ngn": 800
+  },
+  {
+    "product_id": "P010",
+    "product_name": "Dessert 10",
+    "category": "Dessert",
+    "base_price_ngn": 1200
+  },
+  {
+    "product_id": "P011",
+    "product_name": "Sides 11",
+    "category": "Sides",
+    "base_price_ngn": 800
+  },
+  {
+    "product_id": "P012",
+    "product_name": "Pizza 12",
+    "category": "Pizza",
+    "base_price_ngn": 4000
+  },
+  {
+    "product_id": "P013",
+    "product_name": "Pizza 13",
+    "category": "Pizza",
+    "base_price_ngn": 4000
+  },
+  {
+    "product_id": "P014",
+    "product_name": "Beverage 14",
+    "category": "Beverage",
+    "base_price_ngn": 500
+  },
+  {
+    "product_id": "P015",
+    "product_name": "Pizza 15",
+    "category": "Pizza",
+    "base_price_ngn": 5000
+  },
+  {
+    "product_id": "P016",
+    "product_name": "Dessert 16",
+    "category": "Dessert",
+    "base_price_ngn": 800
+  },
+  {
+    "product_id": "P017",
+    "product_name": "Pizza 17",
+    "category": "Pizza",
+    "base_price_ngn": 3000
+  },
+  {
+    "product_id": "P018",
+    "product_name": "Sides 18",
+    "category": "Sides",
+    "base_price_ngn": 1200
+  },
+  {
+    "product_id": "P019",
+    "product_name": "Sides 19",
+    "category": "Sides",
+    "base_price_ngn": 800
+  },
+  {
+    "product_id": "P020",
+    "product_name": "Pizza 20",
+    "category": "Pizza",
+    "base_price_ngn": 5000
+  },
+  {
+    "product_id": "P021",
+    "product_name": "Pizza 21",
+    "category": "Pizza",
+    "base_price_ngn": 3000
+  },
+  {
+    "product_id": "P022",
+    "product_name": "Sides 22",
+    "category": "Sides",
+    "base_price_ngn": 1500
+  },
+  {
+    "product_id": "P023",
+    "product_name": "Pizza 23",
+    "category": "Pizza",
+    "base_price_ngn": 5000
+  },
+  {
+    "product_id": "P024",
+    "product_name": "Sides 24",
+    "category": "Sides",
+    "base_price_ngn": 800
+  }
+]

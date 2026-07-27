@@ -1,0 +1,61 @@
++----------------------------------+
+                               |        marts.dim_customer        |
+                               +----------------------------------+
+                               | [PK/SK] customer_sk              |
+                               | [BK]    customer_id              |
+                               |         signup_date              |
+                               |         city                     |
+                               |         phone                    |
+                               |         is_business              |
+                               +----------------+-----------------+
+                                                |
+                                                | 1:N
+                                                v
++-------------------------------+  +-------------------------------+  +-------------------------------+
+|        marts.dim_date         |  |       marts.fact_orders       |  |        marts.dim_store        |
++-------------------------------+  +-------------------------------+  +-------------------------------+
+| [PK/SK] date_sk (full_date)   |  | [PK]    order_id              |  | [PK/SK] store_sk              |
+|         full_date             |  | [FK]    customer_sk           |  | [BK]    store_id              |
+|         year                  |  | [FK]    store_sk              |  |         effective_from        |
+|         month                 |--| [FK]    channel_sk            |--|         effective_to          |
+|         week                  |  | [FK]    payment_method_sk     |  +-------------------------------+
+|         day_of_week           |  | [FK]    promo_sk              |
+|         day_name              |  | [FK]    date_sk               |  +-------------------------------+
+|         is_weekend            |  |         order_timestamp       |  |        marts.dim_promo        |
++-------------------------------+  |         order_hour            |  +-------------------------------+
+                                   |         promo_flag            |  | [PK/SK] promo_sk              |
++-------------------------------+  |         new_vs_returning_flag |  |         promo_code            |
+|       marts.dim_channel       |  |         customer_type         |--|         is_promo              |
++-------------------------------+  |         items_count           |  +-------------------------------+
+| [PK/SK] channel_sk            |  |         qty_total             |
+|         channel               |--|         subtotal_ngn          |  +-------------------------------+
++-------------------------------+  |         discount_ngn          |  |   marts.dim_payment_method    |
+                                   |         tax_ngn               |  +-------------------------------+
+                                   |         delivery_fee_ngn      |  | [PK/SK] payment_method_sk     |
+                                   |         total_amount_ngn      |--|         payment_method        |
+                                   |         order_count           |  +-------------------------------+
+                                   |         _source_file          |
+                                   |         _loaded_at            |
+                                   |         _batch_id             |
+                                   +---------------+---------------+
+                                                   |
+                                                   | 1:N
+                                                   v
++-------------------------------+  +-------------------------------+  +-------------------------------+
+|       marts.dim_product       |  |     marts.fact_order_items    |  |      marts.fact_deliveries    |
++-------------------------------+  +-------------------------------+  +-------------------------------+
+| [PK/SK] product_sk            |  | [PK/FK] order_id              |  | [PK]    order_id              |
+| [BK]    product_id            |--| [PK/FK] product_id            |  | [FK]    store_sk              |
+|         product_name          |  | [FK]    product_sk            |--| [FK]    date_sk               |
+|         unified_category      |  | [FK]    date_sk               |  |         promised_deliv_mins   |
+|         base_price_ngn        |  | [FK]    store_sk              |  |         actual_deliv_mins     |
++-------------------------------+  | [FK]    channel_sk            |  |         delay_minutes         |
+                                   |         order_timestamp       |  |         delivery_sla_met_flag |
+                                   |         promo_flag            |  |         _source_file          |
+                                   |         quantity              |  |         _loaded_at            |
+                                   |         unit_price            |  |         _batch_id             |
+                                   |         product_revenue       |  +-------------------------------+
+                                   |         _source_file          |
+                                   |         _loaded_at            |
+                                   |         _batch_id             |
+                                   +-------------------------------+

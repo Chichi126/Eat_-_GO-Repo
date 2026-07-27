@@ -1,0 +1,86 @@
+[
+  {
+    "store_id": "S001",
+    "store_name": "ENG Store 1",
+    "city": "Lagos",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 30
+  },
+  {
+    "store_id": "S002",
+    "store_name": "ENG Store 2",
+    "city": "Port Harcourt",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 40
+  },
+  {
+    "store_id": "S003",
+    "store_name": "ENG Store 3",
+    "city": "Lagos",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 30
+  },
+  {
+    "store_id": "S004",
+    "store_name": "ENG Store 4",
+    "city": "Ibadan",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 40
+  },
+  {
+    "store_id": "S005",
+    "store_name": "ENG Store 5",
+    "city": "Port Harcourt",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 40
+  },
+  {
+    "store_id": "S006",
+    "store_name": "ENG Store 6",
+    "city": "Lagos",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 30
+  },
+  {
+    "store_id": "S007",
+    "store_name": "ENG Store 7",
+    "city": "Lagos",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 30
+  },
+  {
+    "store_id": "S008",
+    "store_name": "ENG Store 8",
+    "city": "Ibadan",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 40
+  },
+  {
+    "store_id": "S009",
+    "store_name": "ENG Store 9",
+    "city": "Benin City",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 40
+  },
+  {
+    "store_id": "S010",
+    "store_name": "ENG Store 10",
+    "city": "Benin City",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 40
+  },
+  {
+    "store_id": "S011",
+    "store_name": "ENG Store 11",
+    "city": "Port Harcourt",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 40
+  },
+  {
+    "store_id": "S012",
+    "store_name": "ENG Store 12",
+    "city": "Port Harcourt",
+    "opening_hours": "09:00-23:00",
+    "delivery_sla_minutes": 40
+  }
+]

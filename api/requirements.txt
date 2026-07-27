@@ -1,0 +1,5 @@
+faker
+fastapi
+httpx
+python-multipart
+uvicorn[standard]

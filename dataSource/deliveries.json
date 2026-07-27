@@ -1,0 +1,3634 @@
+[
+  {
+    "order_id": "O000006",
+    "store_id": "S002",
+    "order_ts": "2025-09-22 15:59:12",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 50,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000007",
+    "store_id": "S010",
+    "order_ts": "2025-08-14 13:25:49",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000010",
+    "store_id": "S008",
+    "order_ts": "2025-08-28 02:57:38",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000015",
+    "store_id": "S009",
+    "order_ts": "2025-08-23 20:40:57",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000016",
+    "store_id": "S001",
+    "order_ts": "2025-09-08 22:40:04",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000017",
+    "store_id": "S001",
+    "order_ts": "2025-09-30 07:34:09",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000023",
+    "store_id": "S010",
+    "order_ts": "2025-08-25 04:49:03",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 22,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000024",
+    "store_id": "S008",
+    "order_ts": "2025-09-26 09:29:44",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000029",
+    "store_id": "S002",
+    "order_ts": "2025-08-02 05:02:35",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 59,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000033",
+    "store_id": "S006",
+    "order_ts": "2025-08-31 03:03:05",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000035",
+    "store_id": "S007",
+    "order_ts": "2025-10-13 20:09:22",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 23,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000039",
+    "store_id": "S012",
+    "order_ts": "2025-10-06 23:08:41",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000046",
+    "store_id": "S005",
+    "order_ts": "2025-08-19 06:12:24",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000050",
+    "store_id": "S008",
+    "order_ts": "2025-09-07 12:04:13",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 57,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000052",
+    "store_id": "S002",
+    "order_ts": "2025-10-24 07:52:59",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000053",
+    "store_id": "S007",
+    "order_ts": "2025-08-28 09:36:15",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000054",
+    "store_id": "S009",
+    "order_ts": "2025-09-16 22:19:38",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000055",
+    "store_id": "S009",
+    "order_ts": "2025-10-08 02:11:35",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 56,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000057",
+    "store_id": "S004",
+    "order_ts": "2025-10-01 18:44:46",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000059",
+    "store_id": "S003",
+    "order_ts": "2025-08-01 14:36:52",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000063",
+    "store_id": "S009",
+    "order_ts": "2025-10-09 06:38:59",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000064",
+    "store_id": "S009",
+    "order_ts": "2025-10-29 13:04:48",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 21,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000066",
+    "store_id": "S008",
+    "order_ts": "2025-08-25 21:19:49",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000069",
+    "store_id": "S009",
+    "order_ts": "2025-08-08 22:52:15",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 63,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000070",
+    "store_id": "S004",
+    "order_ts": "2025-09-27 21:36:42",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000071",
+    "store_id": "S002",
+    "order_ts": "2025-10-16 11:52:18",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000073",
+    "store_id": "S009",
+    "order_ts": "2025-10-19 09:34:25",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000074",
+    "store_id": "S003",
+    "order_ts": "2025-08-05 08:48:08",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000075",
+    "store_id": "S002",
+    "order_ts": "2025-08-04 03:35:00",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000076",
+    "store_id": "S008",
+    "order_ts": "2025-10-14 01:17:37",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000077",
+    "store_id": "S008",
+    "order_ts": "2025-10-08 01:09:00",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000078",
+    "store_id": "S007",
+    "order_ts": "2025-09-25 00:06:30",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000081",
+    "store_id": "S007",
+    "order_ts": "2025-10-19 01:12:59",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 57,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000083",
+    "store_id": "S006",
+    "order_ts": "2025-08-09 01:02:36",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000089",
+    "store_id": "S009",
+    "order_ts": "2025-09-21 11:24:54",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000091",
+    "store_id": "S003",
+    "order_ts": "2025-08-13 07:08:05",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 22,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000095",
+    "store_id": "S006",
+    "order_ts": "2025-09-09 02:39:59",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000097",
+    "store_id": "S010",
+    "order_ts": "2025-09-14 11:30:03",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 68,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000103",
+    "store_id": "S004",
+    "order_ts": "2025-10-16 18:31:31",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000107",
+    "store_id": "S001",
+    "order_ts": "2025-09-18 22:37:53",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000109",
+    "store_id": "S004",
+    "order_ts": "2025-08-20 07:46:34",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000111",
+    "store_id": "S004",
+    "order_ts": "2025-08-28 11:06:01",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000112",
+    "store_id": "S001",
+    "order_ts": "2025-08-11 14:17:31",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 50,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000113",
+    "store_id": "S006",
+    "order_ts": "2025-10-19 10:35:06",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000115",
+    "store_id": "S008",
+    "order_ts": "2025-08-23 05:09:14",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000116",
+    "store_id": "S005",
+    "order_ts": "2025-10-14 15:31:09",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 61,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000118",
+    "store_id": "S006",
+    "order_ts": "2025-09-05 17:26:56",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000119",
+    "store_id": "S007",
+    "order_ts": "2025-08-22 13:50:10",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000121",
+    "store_id": "S007",
+    "order_ts": "2025-08-12 08:36:28",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000122",
+    "store_id": "S002",
+    "order_ts": "2025-09-24 20:36:02",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000123",
+    "store_id": "S003",
+    "order_ts": "2025-08-09 05:19:14",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000124",
+    "store_id": "S004",
+    "order_ts": "2025-09-05 13:09:05",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000125",
+    "store_id": "S003",
+    "order_ts": "2025-08-05 19:12:44",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000126",
+    "store_id": "S011",
+    "order_ts": "2025-09-20 02:59:05",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000127",
+    "store_id": "S012",
+    "order_ts": "2025-10-18 06:01:45",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000129",
+    "store_id": "S005",
+    "order_ts": "2025-09-12 20:04:47",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000131",
+    "store_id": "S008",
+    "order_ts": "2025-08-11 21:40:33",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000136",
+    "store_id": "S004",
+    "order_ts": "2025-10-16 07:48:34",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000137",
+    "store_id": "S003",
+    "order_ts": "2025-08-29 09:21:31",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000141",
+    "store_id": "S004",
+    "order_ts": "2025-09-23 03:17:58",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000143",
+    "store_id": "S001",
+    "order_ts": "2025-10-04 01:45:01",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000144",
+    "store_id": "S011",
+    "order_ts": "2025-08-05 21:59:20",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000146",
+    "store_id": "S011",
+    "order_ts": "2025-08-11 03:22:12",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000148",
+    "store_id": "S006",
+    "order_ts": "2025-09-16 20:42:38",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000149",
+    "store_id": "S011",
+    "order_ts": "2025-09-16 22:35:57",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000150",
+    "store_id": "S002",
+    "order_ts": "2025-09-01 01:35:49",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000152",
+    "store_id": "S003",
+    "order_ts": "2025-08-28 22:50:37",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000156",
+    "store_id": "S006",
+    "order_ts": "2025-09-04 04:40:51",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000158",
+    "store_id": "S007",
+    "order_ts": "2025-08-04 23:47:19",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 21,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000159",
+    "store_id": "S003",
+    "order_ts": "2025-09-08 08:26:20",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000161",
+    "store_id": "S006",
+    "order_ts": "2025-08-21 21:47:58",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000163",
+    "store_id": "S007",
+    "order_ts": "2025-09-10 23:39:33",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000164",
+    "store_id": "S010",
+    "order_ts": "2025-10-01 20:48:32",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 76,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000165",
+    "store_id": "S003",
+    "order_ts": "2025-08-07 02:50:10",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 28,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000169",
+    "store_id": "S012",
+    "order_ts": "2025-10-11 20:40:12",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000170",
+    "store_id": "S001",
+    "order_ts": "2025-09-09 10:59:00",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000174",
+    "store_id": "S008",
+    "order_ts": "2025-10-14 11:04:20",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000175",
+    "store_id": "S011",
+    "order_ts": "2025-08-01 08:00:56",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 55,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000178",
+    "store_id": "S006",
+    "order_ts": "2025-08-25 01:12:20",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000184",
+    "store_id": "S005",
+    "order_ts": "2025-09-10 06:00:27",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000185",
+    "store_id": "S004",
+    "order_ts": "2025-08-04 19:13:15",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000186",
+    "store_id": "S011",
+    "order_ts": "2025-08-26 21:47:54",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000188",
+    "store_id": "S002",
+    "order_ts": "2025-08-13 01:45:08",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 25,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000189",
+    "store_id": "S001",
+    "order_ts": "2025-08-21 12:30:08",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000192",
+    "store_id": "S002",
+    "order_ts": "2025-09-17 10:17:48",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000196",
+    "store_id": "S008",
+    "order_ts": "2025-10-26 11:30:32",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 61,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000198",
+    "store_id": "S001",
+    "order_ts": "2025-10-12 11:05:45",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000201",
+    "store_id": "S009",
+    "order_ts": "2025-09-13 04:42:00",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 24,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000202",
+    "store_id": "S011",
+    "order_ts": "2025-09-05 22:41:03",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000205",
+    "store_id": "S009",
+    "order_ts": "2025-08-31 20:02:39",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000207",
+    "store_id": "S002",
+    "order_ts": "2025-09-29 10:26:47",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 21,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000209",
+    "store_id": "S007",
+    "order_ts": "2025-08-23 23:20:15",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 58,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000211",
+    "store_id": "S012",
+    "order_ts": "2025-08-03 05:14:14",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000213",
+    "store_id": "S003",
+    "order_ts": "2025-08-07 23:01:04",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 24,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000214",
+    "store_id": "S004",
+    "order_ts": "2025-09-18 14:47:41",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000216",
+    "store_id": "S005",
+    "order_ts": "2025-09-24 08:06:28",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 60,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000218",
+    "store_id": "S007",
+    "order_ts": "2025-10-10 06:31:23",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000220",
+    "store_id": "S004",
+    "order_ts": "2025-08-23 04:25:24",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000221",
+    "store_id": "S002",
+    "order_ts": "2025-08-06 15:23:27",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 60,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000226",
+    "store_id": "S005",
+    "order_ts": "2025-09-13 15:15:30",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000229",
+    "store_id": "S004",
+    "order_ts": "2025-09-07 00:15:36",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000230",
+    "store_id": "S010",
+    "order_ts": "2025-08-26 19:29:52",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000234",
+    "store_id": "S012",
+    "order_ts": "2025-08-23 11:27:36",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 33,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000235",
+    "store_id": "S006",
+    "order_ts": "2025-10-18 20:35:37",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000238",
+    "store_id": "S008",
+    "order_ts": "2025-10-30 19:07:11",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000240",
+    "store_id": "S001",
+    "order_ts": "2025-08-27 01:50:53",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000245",
+    "store_id": "S001",
+    "order_ts": "2025-09-11 18:07:26",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000247",
+    "store_id": "S004",
+    "order_ts": "2025-08-26 21:21:28",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000248",
+    "store_id": "S011",
+    "order_ts": "2025-10-29 05:17:03",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000251",
+    "store_id": "S009",
+    "order_ts": "2025-09-24 03:34:42",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000255",
+    "store_id": "S008",
+    "order_ts": "2025-09-01 09:12:10",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 55,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000258",
+    "store_id": "S005",
+    "order_ts": "2025-10-18 07:06:08",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 33,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000259",
+    "store_id": "S009",
+    "order_ts": "2025-08-21 18:06:45",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 50,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000260",
+    "store_id": "S011",
+    "order_ts": "2025-08-12 10:15:51",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000262",
+    "store_id": "S009",
+    "order_ts": "2025-10-23 13:11:05",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000263",
+    "store_id": "S011",
+    "order_ts": "2025-08-05 07:37:42",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000268",
+    "store_id": "S011",
+    "order_ts": "2025-09-15 09:26:50",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000270",
+    "store_id": "S011",
+    "order_ts": "2025-10-19 23:13:24",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000272",
+    "store_id": "S002",
+    "order_ts": "2025-09-13 19:49:49",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000275",
+    "store_id": "S001",
+    "order_ts": "2025-08-12 02:01:55",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000276",
+    "store_id": "S012",
+    "order_ts": "2025-09-16 15:38:48",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000278",
+    "store_id": "S003",
+    "order_ts": "2025-08-12 16:17:13",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000279",
+    "store_id": "S002",
+    "order_ts": "2025-10-07 06:01:04",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000280",
+    "store_id": "S010",
+    "order_ts": "2025-08-16 14:48:57",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000283",
+    "store_id": "S005",
+    "order_ts": "2025-10-16 14:36:59",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 57,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000284",
+    "store_id": "S012",
+    "order_ts": "2025-08-19 15:40:41",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 50,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000285",
+    "store_id": "S002",
+    "order_ts": "2025-08-14 00:10:47",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000288",
+    "store_id": "S005",
+    "order_ts": "2025-08-14 01:09:42",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 15,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000291",
+    "store_id": "S010",
+    "order_ts": "2025-09-16 12:16:27",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000293",
+    "store_id": "S001",
+    "order_ts": "2025-09-04 13:36:45",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000295",
+    "store_id": "S003",
+    "order_ts": "2025-10-10 06:00:38",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 50,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000297",
+    "store_id": "S001",
+    "order_ts": "2025-10-28 03:10:15",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000299",
+    "store_id": "S009",
+    "order_ts": "2025-08-06 07:31:03",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000300",
+    "store_id": "S011",
+    "order_ts": "2025-10-19 16:04:14",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000302",
+    "store_id": "S004",
+    "order_ts": "2025-08-09 13:15:02",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000304",
+    "store_id": "S002",
+    "order_ts": "2025-08-29 15:48:35",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 56,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000305",
+    "store_id": "S011",
+    "order_ts": "2025-09-29 01:52:47",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 56,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000306",
+    "store_id": "S008",
+    "order_ts": "2025-09-29 06:32:23",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000313",
+    "store_id": "S009",
+    "order_ts": "2025-09-16 07:09:56",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000314",
+    "store_id": "S011",
+    "order_ts": "2025-10-30 15:50:19",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 56,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000315",
+    "store_id": "S010",
+    "order_ts": "2025-08-24 13:04:39",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000316",
+    "store_id": "S012",
+    "order_ts": "2025-09-03 13:17:43",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000317",
+    "store_id": "S011",
+    "order_ts": "2025-08-15 22:17:15",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000319",
+    "store_id": "S011",
+    "order_ts": "2025-09-12 00:05:05",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000321",
+    "store_id": "S007",
+    "order_ts": "2025-09-13 20:26:58",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000323",
+    "store_id": "S007",
+    "order_ts": "2025-10-15 14:16:11",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000325",
+    "store_id": "S009",
+    "order_ts": "2025-08-22 17:03:50",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000327",
+    "store_id": "S008",
+    "order_ts": "2025-09-15 01:47:55",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000329",
+    "store_id": "S010",
+    "order_ts": "2025-09-27 19:05:29",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000330",
+    "store_id": "S008",
+    "order_ts": "2025-08-19 17:42:48",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000332",
+    "store_id": "S012",
+    "order_ts": "2025-10-06 05:20:57",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000333",
+    "store_id": "S002",
+    "order_ts": "2025-09-29 10:15:44",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000335",
+    "store_id": "S004",
+    "order_ts": "2025-08-13 20:55:49",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000336",
+    "store_id": "S005",
+    "order_ts": "2025-10-14 18:26:16",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000338",
+    "store_id": "S012",
+    "order_ts": "2025-08-02 03:41:45",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000339",
+    "store_id": "S003",
+    "order_ts": "2025-09-06 10:25:30",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000343",
+    "store_id": "S006",
+    "order_ts": "2025-10-15 12:45:02",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 73,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000344",
+    "store_id": "S007",
+    "order_ts": "2025-08-27 21:13:27",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000345",
+    "store_id": "S003",
+    "order_ts": "2025-08-07 23:28:08",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000346",
+    "store_id": "S004",
+    "order_ts": "2025-10-11 02:17:33",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 65,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000347",
+    "store_id": "S008",
+    "order_ts": "2025-10-15 11:14:54",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 28,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000348",
+    "store_id": "S008",
+    "order_ts": "2025-09-07 09:33:09",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 60,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000350",
+    "store_id": "S008",
+    "order_ts": "2025-08-22 00:51:49",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000353",
+    "store_id": "S007",
+    "order_ts": "2025-09-09 19:47:42",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000355",
+    "store_id": "S007",
+    "order_ts": "2025-09-20 06:08:29",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 55,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000356",
+    "store_id": "S002",
+    "order_ts": "2025-09-22 10:09:57",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 23,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000360",
+    "store_id": "S008",
+    "order_ts": "2025-08-30 22:05:36",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000361",
+    "store_id": "S009",
+    "order_ts": "2025-09-23 06:15:42",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000369",
+    "store_id": "S004",
+    "order_ts": "2025-08-10 14:47:59",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000372",
+    "store_id": "S009",
+    "order_ts": "2025-08-28 08:43:11",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000373",
+    "store_id": "S011",
+    "order_ts": "2025-08-07 19:24:51",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000375",
+    "store_id": "S001",
+    "order_ts": "2025-09-13 12:45:34",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000377",
+    "store_id": "S001",
+    "order_ts": "2025-09-23 11:28:40",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 33,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000378",
+    "store_id": "S012",
+    "order_ts": "2025-08-23 11:40:32",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000381",
+    "store_id": "S009",
+    "order_ts": "2025-08-10 11:32:13",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000382",
+    "store_id": "S006",
+    "order_ts": "2025-08-07 22:29:38",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000383",
+    "store_id": "S010",
+    "order_ts": "2025-10-18 05:32:40",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000385",
+    "store_id": "S004",
+    "order_ts": "2025-10-18 13:15:07",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000388",
+    "store_id": "S005",
+    "order_ts": "2025-09-06 05:33:23",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000389",
+    "store_id": "S006",
+    "order_ts": "2025-10-30 21:53:45",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000390",
+    "store_id": "S009",
+    "order_ts": "2025-10-05 08:56:51",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000392",
+    "store_id": "S001",
+    "order_ts": "2025-08-12 11:22:26",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000394",
+    "store_id": "S003",
+    "order_ts": "2025-09-14 21:18:55",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000400",
+    "store_id": "S002",
+    "order_ts": "2025-08-25 22:23:06",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000402",
+    "store_id": "S006",
+    "order_ts": "2025-08-18 17:23:58",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000403",
+    "store_id": "S004",
+    "order_ts": "2025-08-19 07:24:00",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 24,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000404",
+    "store_id": "S004",
+    "order_ts": "2025-10-20 00:03:08",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000406",
+    "store_id": "S002",
+    "order_ts": "2025-08-11 07:04:44",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000408",
+    "store_id": "S006",
+    "order_ts": "2025-10-20 12:46:48",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000409",
+    "store_id": "S012",
+    "order_ts": "2025-08-16 03:44:43",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000411",
+    "store_id": "S009",
+    "order_ts": "2025-09-02 14:45:27",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000412",
+    "store_id": "S009",
+    "order_ts": "2025-08-17 20:30:24",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000414",
+    "store_id": "S004",
+    "order_ts": "2025-10-09 13:36:09",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000417",
+    "store_id": "S012",
+    "order_ts": "2025-08-19 16:43:50",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000418",
+    "store_id": "S009",
+    "order_ts": "2025-09-25 15:28:19",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000419",
+    "store_id": "S012",
+    "order_ts": "2025-10-08 20:16:35",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000421",
+    "store_id": "S003",
+    "order_ts": "2025-10-02 01:39:21",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000422",
+    "store_id": "S007",
+    "order_ts": "2025-09-25 22:14:38",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000423",
+    "store_id": "S001",
+    "order_ts": "2025-09-02 02:13:06",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 33,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000425",
+    "store_id": "S007",
+    "order_ts": "2025-10-20 01:50:30",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 20,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000426",
+    "store_id": "S001",
+    "order_ts": "2025-09-27 11:58:18",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000427",
+    "store_id": "S007",
+    "order_ts": "2025-09-09 07:53:03",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000428",
+    "store_id": "S005",
+    "order_ts": "2025-10-20 16:24:48",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 56,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000429",
+    "store_id": "S009",
+    "order_ts": "2025-10-04 16:09:41",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000431",
+    "store_id": "S010",
+    "order_ts": "2025-08-16 07:56:33",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000433",
+    "store_id": "S006",
+    "order_ts": "2025-10-12 07:08:52",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000434",
+    "store_id": "S002",
+    "order_ts": "2025-08-13 22:26:30",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000436",
+    "store_id": "S009",
+    "order_ts": "2025-08-26 23:54:59",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000437",
+    "store_id": "S002",
+    "order_ts": "2025-08-16 06:50:10",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000438",
+    "store_id": "S007",
+    "order_ts": "2025-09-26 14:37:39",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000439",
+    "store_id": "S011",
+    "order_ts": "2025-10-01 21:39:24",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000440",
+    "store_id": "S001",
+    "order_ts": "2025-08-03 08:06:36",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 25,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000442",
+    "store_id": "S012",
+    "order_ts": "2025-08-02 10:01:57",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000449",
+    "store_id": "S009",
+    "order_ts": "2025-09-08 01:50:59",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000450",
+    "store_id": "S003",
+    "order_ts": "2025-09-28 13:35:15",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 14,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000451",
+    "store_id": "S006",
+    "order_ts": "2025-09-28 09:58:54",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000453",
+    "store_id": "S007",
+    "order_ts": "2025-08-31 04:00:34",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 55,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000454",
+    "store_id": "S008",
+    "order_ts": "2025-08-16 15:50:26",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000457",
+    "store_id": "S002",
+    "order_ts": "2025-09-29 23:50:07",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000458",
+    "store_id": "S007",
+    "order_ts": "2025-09-24 15:36:24",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000459",
+    "store_id": "S003",
+    "order_ts": "2025-10-20 08:44:47",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 21,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000460",
+    "store_id": "S005",
+    "order_ts": "2025-10-31 06:00:23",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000461",
+    "store_id": "S012",
+    "order_ts": "2025-08-20 21:07:11",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000463",
+    "store_id": "S003",
+    "order_ts": "2025-09-04 01:22:49",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000464",
+    "store_id": "S008",
+    "order_ts": "2025-08-15 17:18:20",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000466",
+    "store_id": "S003",
+    "order_ts": "2025-08-26 23:42:48",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000467",
+    "store_id": "S006",
+    "order_ts": "2025-09-05 13:41:25",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 26,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000470",
+    "store_id": "S010",
+    "order_ts": "2025-10-18 05:45:19",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000471",
+    "store_id": "S008",
+    "order_ts": "2025-09-27 04:09:17",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000472",
+    "store_id": "S010",
+    "order_ts": "2025-09-28 13:52:15",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000485",
+    "store_id": "S012",
+    "order_ts": "2025-09-04 14:30:41",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 65,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000486",
+    "store_id": "S001",
+    "order_ts": "2025-08-26 10:47:35",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000487",
+    "store_id": "S012",
+    "order_ts": "2025-10-13 13:01:25",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000488",
+    "store_id": "S009",
+    "order_ts": "2025-10-09 07:50:55",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000491",
+    "store_id": "S008",
+    "order_ts": "2025-08-09 13:42:37",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000492",
+    "store_id": "S004",
+    "order_ts": "2025-08-20 17:16:31",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000496",
+    "store_id": "S009",
+    "order_ts": "2025-10-10 00:25:00",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 57,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000498",
+    "store_id": "S009",
+    "order_ts": "2025-09-03 22:04:29",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 57,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000500",
+    "store_id": "S003",
+    "order_ts": "2025-10-05 23:44:22",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000502",
+    "store_id": "S005",
+    "order_ts": "2025-08-07 16:58:44",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000505",
+    "store_id": "S010",
+    "order_ts": "2025-08-10 13:48:47",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000509",
+    "store_id": "S001",
+    "order_ts": "2025-10-26 13:23:50",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000514",
+    "store_id": "S002",
+    "order_ts": "2025-08-10 16:34:59",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000515",
+    "store_id": "S011",
+    "order_ts": "2025-10-16 10:59:28",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000516",
+    "store_id": "S010",
+    "order_ts": "2025-09-24 10:14:25",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 57,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000518",
+    "store_id": "S007",
+    "order_ts": "2025-10-06 01:43:35",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000519",
+    "store_id": "S001",
+    "order_ts": "2025-10-22 14:47:02",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 14,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000523",
+    "store_id": "S001",
+    "order_ts": "2025-10-12 05:22:46",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 10,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000529",
+    "store_id": "S004",
+    "order_ts": "2025-09-21 06:57:32",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000530",
+    "store_id": "S005",
+    "order_ts": "2025-10-04 18:30:26",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000531",
+    "store_id": "S006",
+    "order_ts": "2025-10-26 02:50:38",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 60,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000534",
+    "store_id": "S012",
+    "order_ts": "2025-10-13 23:19:43",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000535",
+    "store_id": "S002",
+    "order_ts": "2025-10-08 15:59:52",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000536",
+    "store_id": "S004",
+    "order_ts": "2025-08-08 02:57:35",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000537",
+    "store_id": "S009",
+    "order_ts": "2025-10-26 04:43:18",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000538",
+    "store_id": "S010",
+    "order_ts": "2025-10-08 11:50:19",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000539",
+    "store_id": "S008",
+    "order_ts": "2025-10-01 01:39:13",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000540",
+    "store_id": "S001",
+    "order_ts": "2025-09-15 20:48:29",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000541",
+    "store_id": "S009",
+    "order_ts": "2025-09-17 18:40:52",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000542",
+    "store_id": "S003",
+    "order_ts": "2025-10-04 05:33:36",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000544",
+    "store_id": "S004",
+    "order_ts": "2025-08-10 04:54:21",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000545",
+    "store_id": "S009",
+    "order_ts": "2025-08-31 21:53:37",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000548",
+    "store_id": "S003",
+    "order_ts": "2025-08-07 17:24:24",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000549",
+    "store_id": "S003",
+    "order_ts": "2025-08-27 14:47:47",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000550",
+    "store_id": "S008",
+    "order_ts": "2025-09-21 02:09:51",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000553",
+    "store_id": "S003",
+    "order_ts": "2025-08-13 20:52:54",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 33,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000554",
+    "store_id": "S010",
+    "order_ts": "2025-10-21 00:36:20",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 50,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000557",
+    "store_id": "S001",
+    "order_ts": "2025-09-05 23:01:46",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000558",
+    "store_id": "S011",
+    "order_ts": "2025-09-02 13:48:51",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000559",
+    "store_id": "S001",
+    "order_ts": "2025-09-18 23:15:23",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 26,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000562",
+    "store_id": "S012",
+    "order_ts": "2025-10-27 05:19:29",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000564",
+    "store_id": "S005",
+    "order_ts": "2025-09-05 06:11:00",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000566",
+    "store_id": "S009",
+    "order_ts": "2025-10-05 08:25:37",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000571",
+    "store_id": "S006",
+    "order_ts": "2025-09-18 01:30:01",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000572",
+    "store_id": "S011",
+    "order_ts": "2025-09-14 17:45:48",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000575",
+    "store_id": "S006",
+    "order_ts": "2025-10-22 13:24:24",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000576",
+    "store_id": "S006",
+    "order_ts": "2025-09-09 21:02:06",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 60,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000577",
+    "store_id": "S010",
+    "order_ts": "2025-09-15 15:24:27",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 56,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000578",
+    "store_id": "S001",
+    "order_ts": "2025-09-12 19:36:23",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000580",
+    "store_id": "S012",
+    "order_ts": "2025-09-02 21:15:24",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 67,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000581",
+    "store_id": "S012",
+    "order_ts": "2025-08-02 13:28:14",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000584",
+    "store_id": "S012",
+    "order_ts": "2025-08-09 05:26:25",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000586",
+    "store_id": "S011",
+    "order_ts": "2025-09-15 03:53:13",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000590",
+    "store_id": "S009",
+    "order_ts": "2025-09-07 04:49:56",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000593",
+    "store_id": "S001",
+    "order_ts": "2025-10-29 18:21:23",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000594",
+    "store_id": "S010",
+    "order_ts": "2025-10-03 00:12:07",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000597",
+    "store_id": "S010",
+    "order_ts": "2025-08-22 14:53:43",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000598",
+    "store_id": "S008",
+    "order_ts": "2025-09-26 14:59:21",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 59,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000601",
+    "store_id": "S010",
+    "order_ts": "2025-10-19 12:54:25",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000602",
+    "store_id": "S003",
+    "order_ts": "2025-09-14 15:47:08",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 21,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000608",
+    "store_id": "S010",
+    "order_ts": "2025-10-30 11:21:12",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000613",
+    "store_id": "S007",
+    "order_ts": "2025-08-30 20:56:59",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000614",
+    "store_id": "S004",
+    "order_ts": "2025-10-09 16:42:33",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000615",
+    "store_id": "S003",
+    "order_ts": "2025-08-02 17:53:31",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000616",
+    "store_id": "S005",
+    "order_ts": "2025-10-13 01:23:13",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000619",
+    "store_id": "S006",
+    "order_ts": "2025-10-03 06:19:50",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000621",
+    "store_id": "S007",
+    "order_ts": "2025-09-11 16:42:34",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 24,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000622",
+    "store_id": "S002",
+    "order_ts": "2025-09-10 04:41:54",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000625",
+    "store_id": "S007",
+    "order_ts": "2025-09-16 21:32:25",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000626",
+    "store_id": "S005",
+    "order_ts": "2025-09-27 03:57:08",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000627",
+    "store_id": "S006",
+    "order_ts": "2025-09-09 06:27:45",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000628",
+    "store_id": "S006",
+    "order_ts": "2025-08-06 04:57:41",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000629",
+    "store_id": "S004",
+    "order_ts": "2025-08-18 05:42:10",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000631",
+    "store_id": "S011",
+    "order_ts": "2025-08-25 18:00:34",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000635",
+    "store_id": "S005",
+    "order_ts": "2025-08-07 04:49:52",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000637",
+    "store_id": "S010",
+    "order_ts": "2025-09-11 15:24:43",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000638",
+    "store_id": "S005",
+    "order_ts": "2025-08-30 14:42:48",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 10,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000643",
+    "store_id": "S012",
+    "order_ts": "2025-09-06 13:40:29",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 57,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000646",
+    "store_id": "S001",
+    "order_ts": "2025-10-04 07:09:20",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000648",
+    "store_id": "S009",
+    "order_ts": "2025-10-11 20:18:17",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000651",
+    "store_id": "S004",
+    "order_ts": "2025-08-27 23:47:18",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000652",
+    "store_id": "S005",
+    "order_ts": "2025-08-19 18:33:40",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000653",
+    "store_id": "S011",
+    "order_ts": "2025-09-01 01:19:45",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 28,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000654",
+    "store_id": "S004",
+    "order_ts": "2025-09-14 05:27:39",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000655",
+    "store_id": "S010",
+    "order_ts": "2025-08-05 13:24:45",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000660",
+    "store_id": "S012",
+    "order_ts": "2025-09-12 05:38:22",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000661",
+    "store_id": "S005",
+    "order_ts": "2025-08-25 19:25:03",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000664",
+    "store_id": "S009",
+    "order_ts": "2025-08-21 14:49:25",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000668",
+    "store_id": "S002",
+    "order_ts": "2025-10-23 20:06:46",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 28,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000669",
+    "store_id": "S007",
+    "order_ts": "2025-10-26 18:23:51",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000671",
+    "store_id": "S009",
+    "order_ts": "2025-09-14 15:37:29",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000672",
+    "store_id": "S011",
+    "order_ts": "2025-10-28 04:47:33",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000675",
+    "store_id": "S003",
+    "order_ts": "2025-10-19 03:04:18",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 55,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000676",
+    "store_id": "S012",
+    "order_ts": "2025-08-25 08:54:51",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 26,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000678",
+    "store_id": "S009",
+    "order_ts": "2025-10-22 03:31:40",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000679",
+    "store_id": "S008",
+    "order_ts": "2025-10-11 03:20:25",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000681",
+    "store_id": "S010",
+    "order_ts": "2025-08-18 15:24:44",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000682",
+    "store_id": "S012",
+    "order_ts": "2025-08-19 04:53:00",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 57,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000683",
+    "store_id": "S002",
+    "order_ts": "2025-08-15 05:08:29",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 56,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000685",
+    "store_id": "S012",
+    "order_ts": "2025-10-16 18:28:34",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000689",
+    "store_id": "S003",
+    "order_ts": "2025-10-26 16:05:43",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000691",
+    "store_id": "S008",
+    "order_ts": "2025-08-03 19:09:26",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 59,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000692",
+    "store_id": "S007",
+    "order_ts": "2025-08-14 09:31:40",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000693",
+    "store_id": "S001",
+    "order_ts": "2025-08-27 23:11:47",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000697",
+    "store_id": "S004",
+    "order_ts": "2025-08-16 15:26:07",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000698",
+    "store_id": "S010",
+    "order_ts": "2025-09-21 14:40:39",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000699",
+    "store_id": "S004",
+    "order_ts": "2025-08-03 13:49:38",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000704",
+    "store_id": "S010",
+    "order_ts": "2025-10-06 21:27:39",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000705",
+    "store_id": "S005",
+    "order_ts": "2025-08-20 01:07:08",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000710",
+    "store_id": "S010",
+    "order_ts": "2025-08-16 11:53:11",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000712",
+    "store_id": "S004",
+    "order_ts": "2025-08-13 18:47:00",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000715",
+    "store_id": "S003",
+    "order_ts": "2025-08-30 15:05:22",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000717",
+    "store_id": "S008",
+    "order_ts": "2025-08-31 13:30:12",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000723",
+    "store_id": "S009",
+    "order_ts": "2025-10-18 17:42:01",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000724",
+    "store_id": "S005",
+    "order_ts": "2025-09-08 23:27:24",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000727",
+    "store_id": "S009",
+    "order_ts": "2025-08-25 20:07:37",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000728",
+    "store_id": "S003",
+    "order_ts": "2025-09-28 06:39:32",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 18,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000730",
+    "store_id": "S002",
+    "order_ts": "2025-10-28 00:28:01",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 70,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000731",
+    "store_id": "S012",
+    "order_ts": "2025-09-30 22:53:30",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000734",
+    "store_id": "S011",
+    "order_ts": "2025-09-28 19:07:55",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 58,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000735",
+    "store_id": "S011",
+    "order_ts": "2025-08-27 08:41:11",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 25,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000738",
+    "store_id": "S007",
+    "order_ts": "2025-08-09 09:26:33",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000740",
+    "store_id": "S010",
+    "order_ts": "2025-08-16 04:44:20",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000741",
+    "store_id": "S009",
+    "order_ts": "2025-10-29 13:14:20",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000744",
+    "store_id": "S004",
+    "order_ts": "2025-10-03 00:10:52",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000745",
+    "store_id": "S005",
+    "order_ts": "2025-09-20 16:53:17",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 36,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000746",
+    "store_id": "S010",
+    "order_ts": "2025-10-09 20:42:38",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000748",
+    "store_id": "S005",
+    "order_ts": "2025-10-28 08:08:53",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000749",
+    "store_id": "S007",
+    "order_ts": "2025-08-13 02:21:33",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000752",
+    "store_id": "S007",
+    "order_ts": "2025-09-23 22:58:42",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000754",
+    "store_id": "S009",
+    "order_ts": "2025-08-26 21:11:47",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 56,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000756",
+    "store_id": "S010",
+    "order_ts": "2025-09-21 04:46:28",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000758",
+    "store_id": "S011",
+    "order_ts": "2025-08-24 22:49:08",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000759",
+    "store_id": "S003",
+    "order_ts": "2025-10-21 07:58:31",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 26,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000760",
+    "store_id": "S008",
+    "order_ts": "2025-09-16 03:14:14",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000763",
+    "store_id": "S002",
+    "order_ts": "2025-10-30 08:17:11",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000766",
+    "store_id": "S001",
+    "order_ts": "2025-09-23 13:23:05",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 27,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000768",
+    "store_id": "S011",
+    "order_ts": "2025-08-06 12:37:15",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000772",
+    "store_id": "S008",
+    "order_ts": "2025-10-13 15:41:31",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000778",
+    "store_id": "S012",
+    "order_ts": "2025-10-01 22:30:54",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 21,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000780",
+    "store_id": "S001",
+    "order_ts": "2025-09-15 19:14:02",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 46,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000785",
+    "store_id": "S011",
+    "order_ts": "2025-10-21 11:24:25",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000787",
+    "store_id": "S010",
+    "order_ts": "2025-08-14 23:40:53",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000790",
+    "store_id": "S001",
+    "order_ts": "2025-09-15 12:26:37",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000794",
+    "store_id": "S004",
+    "order_ts": "2025-09-16 22:11:33",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000795",
+    "store_id": "S010",
+    "order_ts": "2025-10-14 20:21:11",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000796",
+    "store_id": "S001",
+    "order_ts": "2025-09-04 08:27:25",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 25,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000799",
+    "store_id": "S005",
+    "order_ts": "2025-09-26 01:22:01",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000801",
+    "store_id": "S010",
+    "order_ts": "2025-10-22 09:26:48",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000802",
+    "store_id": "S012",
+    "order_ts": "2025-08-27 09:47:39",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 58,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000804",
+    "store_id": "S010",
+    "order_ts": "2025-08-02 18:09:49",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000805",
+    "store_id": "S007",
+    "order_ts": "2025-08-13 20:42:42",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 20,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000807",
+    "store_id": "S004",
+    "order_ts": "2025-10-18 22:39:46",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000808",
+    "store_id": "S002",
+    "order_ts": "2025-10-06 02:34:39",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000809",
+    "store_id": "S004",
+    "order_ts": "2025-10-30 03:28:38",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000812",
+    "store_id": "S003",
+    "order_ts": "2025-10-02 15:00:37",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000816",
+    "store_id": "S005",
+    "order_ts": "2025-08-21 09:01:15",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 28,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000817",
+    "store_id": "S008",
+    "order_ts": "2025-09-29 04:32:44",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 60,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000818",
+    "store_id": "S006",
+    "order_ts": "2025-09-26 04:53:19",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 22,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000819",
+    "store_id": "S009",
+    "order_ts": "2025-09-06 08:27:03",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 10,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000821",
+    "store_id": "S007",
+    "order_ts": "2025-08-28 15:07:36",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000828",
+    "store_id": "S001",
+    "order_ts": "2025-08-28 22:42:51",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000831",
+    "store_id": "S010",
+    "order_ts": "2025-10-17 03:16:10",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 33,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000836",
+    "store_id": "S010",
+    "order_ts": "2025-09-28 17:14:24",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000839",
+    "store_id": "S008",
+    "order_ts": "2025-08-06 18:23:21",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 47,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000840",
+    "store_id": "S004",
+    "order_ts": "2025-09-09 23:48:51",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000848",
+    "store_id": "S010",
+    "order_ts": "2025-10-17 12:38:44",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 20,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000853",
+    "store_id": "S011",
+    "order_ts": "2025-09-08 21:04:23",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000856",
+    "store_id": "S006",
+    "order_ts": "2025-09-24 00:48:23",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000857",
+    "store_id": "S003",
+    "order_ts": "2025-10-13 07:53:15",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000859",
+    "store_id": "S005",
+    "order_ts": "2025-10-21 12:10:54",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 38,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000861",
+    "store_id": "S010",
+    "order_ts": "2025-10-02 11:21:45",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 60,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000863",
+    "store_id": "S011",
+    "order_ts": "2025-10-11 09:03:07",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000866",
+    "store_id": "S007",
+    "order_ts": "2025-10-31 05:58:21",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 55,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000870",
+    "store_id": "S010",
+    "order_ts": "2025-10-10 00:31:12",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000873",
+    "store_id": "S012",
+    "order_ts": "2025-09-05 00:14:28",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000881",
+    "store_id": "S002",
+    "order_ts": "2025-10-11 17:38:55",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 53,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000883",
+    "store_id": "S002",
+    "order_ts": "2025-10-24 02:16:02",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000885",
+    "store_id": "S002",
+    "order_ts": "2025-08-03 03:42:43",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 58,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000886",
+    "store_id": "S004",
+    "order_ts": "2025-08-13 02:30:18",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000887",
+    "store_id": "S005",
+    "order_ts": "2025-08-24 00:39:47",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000891",
+    "store_id": "S005",
+    "order_ts": "2025-10-13 03:18:42",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000900",
+    "store_id": "S010",
+    "order_ts": "2025-10-23 04:30:20",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000902",
+    "store_id": "S010",
+    "order_ts": "2025-09-24 22:43:36",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 33,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000907",
+    "store_id": "S001",
+    "order_ts": "2025-09-09 15:17:19",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000909",
+    "store_id": "S007",
+    "order_ts": "2025-10-16 16:32:48",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 16,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000911",
+    "store_id": "S007",
+    "order_ts": "2025-09-24 20:41:37",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000913",
+    "store_id": "S009",
+    "order_ts": "2025-08-08 00:13:53",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000914",
+    "store_id": "S005",
+    "order_ts": "2025-10-13 09:35:56",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000916",
+    "store_id": "S001",
+    "order_ts": "2025-08-09 03:27:09",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 48,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000920",
+    "store_id": "S012",
+    "order_ts": "2025-08-12 01:37:36",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 45,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000923",
+    "store_id": "S003",
+    "order_ts": "2025-08-03 21:56:51",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000924",
+    "store_id": "S012",
+    "order_ts": "2025-08-22 07:23:14",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000925",
+    "store_id": "S010",
+    "order_ts": "2025-10-08 09:30:02",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000926",
+    "store_id": "S004",
+    "order_ts": "2025-10-23 04:39:41",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 49,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000930",
+    "store_id": "S010",
+    "order_ts": "2025-08-07 00:24:52",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000931",
+    "store_id": "S001",
+    "order_ts": "2025-08-22 14:45:03",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000934",
+    "store_id": "S009",
+    "order_ts": "2025-10-28 04:05:30",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 33,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000937",
+    "store_id": "S001",
+    "order_ts": "2025-08-13 08:04:04",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 39,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000938",
+    "store_id": "S010",
+    "order_ts": "2025-10-08 23:33:34",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000939",
+    "store_id": "S008",
+    "order_ts": "2025-09-14 10:12:15",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000940",
+    "store_id": "S007",
+    "order_ts": "2025-10-26 00:43:00",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 42,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000941",
+    "store_id": "S001",
+    "order_ts": "2025-08-27 11:46:46",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000943",
+    "store_id": "S004",
+    "order_ts": "2025-10-28 11:33:16",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 40,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000945",
+    "store_id": "S012",
+    "order_ts": "2025-10-06 06:04:04",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 44,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000947",
+    "store_id": "S001",
+    "order_ts": "2025-09-20 00:37:44",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000952",
+    "store_id": "S010",
+    "order_ts": "2025-09-03 06:27:06",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 29,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000955",
+    "store_id": "S008",
+    "order_ts": "2025-09-20 18:16:14",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 52,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000963",
+    "store_id": "S011",
+    "order_ts": "2025-10-10 16:23:41",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 41,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000964",
+    "store_id": "S009",
+    "order_ts": "2025-10-04 05:14:52",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 43,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000967",
+    "store_id": "S012",
+    "order_ts": "2025-08-28 07:50:15",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 54,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000972",
+    "store_id": "S006",
+    "order_ts": "2025-10-15 11:56:49",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000975",
+    "store_id": "S002",
+    "order_ts": "2025-10-01 20:28:53",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000976",
+    "store_id": "S008",
+    "order_ts": "2025-08-21 03:11:57",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 55,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000977",
+    "store_id": "S011",
+    "order_ts": "2025-10-08 11:19:50",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 22,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000979",
+    "store_id": "S001",
+    "order_ts": "2025-10-29 11:04:26",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 30,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000980",
+    "store_id": "S003",
+    "order_ts": "2025-08-16 07:26:30",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 37,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000981",
+    "store_id": "S007",
+    "order_ts": "2025-09-27 16:51:24",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 23,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000989",
+    "store_id": "S009",
+    "order_ts": "2025-08-26 00:36:16",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000991",
+    "store_id": "S012",
+    "order_ts": "2025-10-12 01:29:57",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 35,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O000993",
+    "store_id": "S008",
+    "order_ts": "2025-09-04 10:19:56",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 51,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000995",
+    "store_id": "S003",
+    "order_ts": "2025-10-01 11:05:26",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 34,
+    "delivered_within_sla": 0
+  },
+  {
+    "order_id": "O000998",
+    "store_id": "S011",
+    "order_ts": "2025-08-03 05:55:39",
+    "promised_delivery_minutes": 40,
+    "actual_delivery_minutes": 31,
+    "delivered_within_sla": 1
+  },
+  {
+    "order_id": "O001000",
+    "store_id": "S001",
+    "order_ts": "2025-10-26 14:11:06",
+    "promised_delivery_minutes": 30,
+    "actual_delivery_minutes": 32,
+    "delivered_within_sla": 0
+  }
+]

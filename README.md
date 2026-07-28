@@ -1,392 +1,1253 @@
+
+
 # Eat'N'Go BI Engineering Pipeline
 
-Local batch pipeline for multi-brand restaurant sales, customer, store, product, and delivery reporting.
+## End-to-End Restaurant Analytics Data Platform
 
-The project turns six operational JSON files, with an optional provider API feed, into an auditable DuckDB reporting warehouse with staging tables, dimensional marts, BI-facing views, data-quality checks, reconciliation, orchestration, and run logs.
+![Architecture](docs/data_pipeline.png)
 
-## Business Context
+---
 
-Eat'N'Go Limited operates Domino's Pizza, Cold Stone Creamery, and Pinkberry in Nigeria. The warehouse uses the following brand values:
+# 1. Project Overview
+
+This project implements an end-to-end Business Intelligence (BI) data engineering pipeline for **Eat'N'Go Limited**, a multi-brand restaurant organisation operating across:
 
 - Domino's Pizza Nigeria
 - Cold Stone Creamery Nigeria
 - Pinkberry Nigeria
 
-## Design Intent
+The objective of the platform is to transform operational source data into a trusted analytical warehouse that supports reporting across:
 
-This repository is designed for a single-node BI engineering workflow where the main priorities are:
+- Sales performance
+- Customer behaviour
+- Product performance
+- Store operations
+- Delivery performance
 
-- deterministic reruns
-- explicit source validation
-- separate source ingestion paths for JSON and API feeds
-- clear raw, staging, mart, and audit boundaries
-- inspectable data-quality and reconciliation results
-- low setup overhead for local runs and Airflow testing
+The pipeline demonstrates a complete modern data engineering workflow:
 
-The scope is batch-oriented. The API path is provider-configurable, but this repository does not include a real vendor API contract.
+```
+Source Data
+    |
+    v
+Raw Data Landing
+    |
+    v
+Data Validation & Processing
+    |
+    v
+Analytical Warehouse
+    |
+    v
+BI Reporting Layer
+    |
+    v
+Data Quality & Monitoring
+```
 
-## Outputs
+The solution was designed with emphasis on:
 
-The reporting outputs are exposed through the `core` schema:
+- reliable ingestion
+- reproducible processing
+- clear data ownership between layers
+- auditability
+- data quality assurance
+- BI readiness
 
-| View | Purpose |
-| --- | --- |
-| `core.vw_sales_performance` | Order, revenue, channel, payment, promotion, and customer-type reporting |
-| `core.vw_delivery_performance` | Delivery SLA, delay, store, and date reporting |
-| `core.vw_product_performance` | Product/category quantity and revenue reporting |
-| `core.vw_customer_summary` | Customer order history, spend, and recency reporting |
+---
 
-The underlying dimensional model is kept in `marts` so the reporting views can be traced back to grain-level facts.
+# 2. Business Context
 
-Expected result from the current sample data:
+Eat'N'Go operates multiple restaurant brands where operational data is generated from different business activities including:
 
-| Area | Result |
-| --- | --- |
-| `marts.fact_orders` | 1,000 rows |
-| `marts.fact_order_items` | 1,733 rows |
-| `marts.fact_deliveries` | 454 rows |
-| Data quality | 39 pass, 2 warn, 0 fail |
-| Reconciliation | 80 pass, 0 fail |
+- customer transactions
+- product sales
+- store operations
+- delivery activities
+- promotions
 
-## Business Rules
+Business stakeholders require a central analytical view to answer questions such as:
 
-- `order_ts` is the authoritative business timestamp for sales, product, and delivery reporting.
-- `fact_orders` is order grain and supports order count, revenue, channel, payment, promotion, and customer-type analysis.
-- `fact_order_items` is order/product grain and carries its own date, store, and channel keys to avoid product metrics depending on order-level joins.
-- `fact_deliveries` is delivery grain and uses promised minutes, actual minutes, and SLA status for delivery reporting.
-- Promo codes with zero discount and unusual daily order-volume changes are warning exceptions. They remain visible for business investigation but do not block the load.
-- Hard failures such as missing critical keys, broken relationships, invalid totals, and invalid delivery values block the pipeline.
+## Sales Performance
 
-## Design Trade-Offs
+Examples:
 
-- DuckDB is used because the dataset fits local analytical processing and benefits from a file-backed warehouse.
-- SQL owns the core transformations so model logic remains inspectable without stepping through Python.
-- MinIO is used in the containerized path to show a raw/staging object-store boundary without introducing cloud infrastructure.
-- JSON and API sources are kept separate at ingestion. Both paths converge only after source data has landed as raw JSON.
-- API extraction stores provider response pages under `rawapi` and writes normalized source-contract JSON under `rawjson` for the shared converter.
-- The store dimension is implemented as SCD Type 2. The current tracked attribute is `city`; additional attributes should be added only when the business meaning is confirmed.
-- Run status is represented through Airflow task state, optional email, and audit tables.
+- How much revenue is generated daily?
+- Which brands and stores perform best?
+- Which sales channels contribute the most revenue?
+- How effective are promotions?
 
-## Architecture
+## Customer Analytics
 
-Mermaid source and rendered diagrams are in:
+Examples:
 
-- `docs/eat_ngo_pipeline_architecture.md`
-- `docs/eat_ngo_architecture_diagram.svg`
-- `docs/eat_ngo_data_model_diagram.svg`
+- Who are the highest-value customers?
+- How frequently do customers purchase?
+- What are customer spending patterns?
 
-Pipeline stages:
+## Product Analytics
 
-1. Validate the source boundary.
-2. Land JSON files or API payloads into MinIO.
-3. Convert raw JSON to typed Parquet.
-4. Build canonical staging tables.
-5. Build SCD dimensions, facts, and BI views.
-6. Run data-quality checks and row-level exception capture.
-7. Run reconciliation checks.
-8. Persist run history and send optional Airflow email notifications.
+Examples:
 
-## System Guarantees
+- Which products generate the highest revenue?
+- Which categories perform best?
+- Which products show declining demand?
 
-- JSON runs require the full six-file source drop before loading.
-- JSON files are fingerprinted by content, size, and expected file set.
-- A JSON fingerprint is marked processed only after the warehouse build, data-quality checks, and reconciliation complete successfully.
-- API runs use bounded half-open intervals, pagination, retries, optional store filters, and a configurable lookback window.
-- API watermarks advance only after raw provider pages and the API manifest are written.
-- Zero-record API intervals are recorded and exit successfully without writing an empty schema-breaking source file.
-- Raw conversion validates schema drift before writing Parquet.
-- Data-quality and reconciliation history are keyed by `run_id`.
-- Airflow branches cleanly for no JSON change, missing API config, and zero-record API intervals.
+## Delivery Operations
 
-## Repository Layout
+Examples:
+
+- Are delivery SLAs being achieved?
+- Which stores experience delivery delays?
+- What operational factors impact delivery performance?
+
+---
+
+# 3. Solution Architecture
+
+The platform follows a layered data architecture separating ingestion, storage, transformation, modelling, and reporting responsibilities.
+
+The primary source for this implementation is the operational JSON dataset provided for the assessment.
+
+An API ingestion adapter is included as an extension pattern for future operational sources.
+
+The main architecture follows:
+
+```
+Operational JSON Files
+
+        |
+        v
+
+Source Validation
+
+        |
+        v
+
+MinIO Object Storage
+(Bronze Layer)
+
+        |
+        v
+
+JSON Validation
++
+Parquet Conversion
+
+        |
+        v
+
+Staging Layer
+
+        |
+        v
+
+Dimensional Warehouse
+(Gold Layer)
+
+        |
+        v
+
+BI Reporting Views
+
+        |
+        v
+
+Quality Checks
++
+Audit History
+```
+
+---
+
+# 4. Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Pipeline orchestration and ingestion logic |
+| MinIO | S3-compatible object storage |
+| DuckDB | Analytical warehouse |
+| SQL | Transformation and modelling |
+| Apache Airflow | Workflow orchestration |
+| Parquet | Analytical storage format |
+| Docker | Local infrastructure deployment |
+
+---
+
+# 5. Data Architecture
+
+The solution follows a Medallion-style architecture.
+
+The purpose is to progressively improve data quality as information moves through each layer.
+
+---
+
+# Bronze Layer — Raw Data Storage
+
+The Bronze layer stores source data exactly as received.
+
+The principle is:
+
+> Preserve raw data before applying transformations.
+
+This provides:
+
+- source traceability
+- replay capability
+- easier debugging
+- historical auditability
+
+Technology:
+
+- MinIO object storage
+
+Example:
+
+```
+raw/
+
+└── rawjson/
+
+    ├── customers.json
+
+    ├── stores.json
+
+    ├── products.json
+
+    ├── orders.json
+
+    ├── order_items.json
+
+    └── deliveries.json
+```
+
+No business transformations are applied at this stage.
+
+---
+
+# Silver Layer — Structured Analytical Data
+
+The Silver layer converts raw JSON into validated analytical datasets.
+
+Responsibilities:
+
+- schema validation
+- datatype standardisation
+- missing field detection
+- duplicate handling
+- JSON to Parquet conversion
+
+
+Example:
+
+```
+Raw JSON
+
+orders.json
+
+       |
+       v
+
+Parquet Dataset
+
+orders.parquet
+```
+
+Parquet was selected because it provides:
+
+- column-based storage
+- efficient analytical queries
+- compression
+- compatibility with modern analytics engines
+
+---
+
+# Gold Layer — Business Warehouse
+
+The Gold layer contains business-ready analytical models.
+
+It includes:
+
+- dimensions
+- fact tables
+- reporting views
+
+The warehouse follows dimensional modelling principles to support BI workloads.
+
+---
+
+# 6. Data Warehouse Design
+
+The warehouse consists of:
+
+```
+                dim_customer
+
+                     |
+
+                     |
+
+dim_product ---- fact_orders ---- dim_date
+
+                     |
+
+                     |
+
+                dim_store
+
+                     |
+
+                     |
+
+             fact_deliveries
+```
+
+---
+
+## Staging Layer
+
+The staging layer contains cleaned source-aligned datasets.
+
+| Table | Purpose |
+|-|-|
+| staging.int_customers | Customer information |
+| staging.int_stores | Store information |
+| staging.int_products | Product catalogue |
+| staging.int_orders | Order transactions |
+| staging.int_order_items | Product-level transactions |
+| staging.int_deliveries | Delivery information |
+
+---
+
+## Dimension Tables
+
+Dimensions provide reusable analytical attributes.
+
+| Dimension | Purpose |
+|-|-|
+| dim_customer | Customer attributes |
+| dim_store | Store information and history |
+| dim_product | Product classification |
+| dim_date | Calendar reporting |
+| dim_channel | Sales channel analysis |
+| dim_payment_method | Payment analysis |
+| dim_promo | Promotion analysis |
+
+---
+
+## Fact Tables
+
+Facts represent measurable business events.
+
+| Fact Table | Grain |
+|-|-|
+| fact_orders | One record per order |
+| fact_order_items | One record per order-product combination |
+| fact_deliveries | One record per delivery |
+
+Defining grain explicitly prevents incorrect reporting calculations.
+
+
+
+Alright my guy, continuing from where we stopped. This is **Part 2 (final part)** of the rewritten README.
+
+---
+
+# 7. Pipeline Execution Flow
+
+The pipeline executes through a series of controlled stages designed to ensure reliability, traceability, and data accuracy.
+
+---
+
+## Stage 1 — Source Validation
+
+Before ingestion begins, the pipeline validates the availability and integrity of source data.
+
+For the JSON workflow, validation includes:
+
+- required file availability
+- file completeness
+- file size checks
+- content fingerprint generation
+- duplicate source detection
+
+
+Example:
 
 ```text
-.
-├── api/                  # FastAPI provider simulator and API test harness
-├── dags/                 # Airflow DAGs for JSON and API source paths
-├── dataSource/           # Six source JSON files used by the local pipeline
-├── docs/                 # Requirement document, architecture, and model diagrams
-├── pipeline/             # Ingestion, raw conversion, staging, audit, and state helpers
-├── scripts/              # Local no-Airflow pipeline entrypoints
-├── warehouse/            # DuckDB SQL for profiling, marts, quality, and reconciliation
-├── docker-compose.yaml   # Airflow, Postgres, Redis, and MinIO stack
-└── README.md
+dataSource/
+
+├── customers.json
+├── stores.json
+├── products.json
+├── orders.json
+├── order_items.json
+└── deliveries.json
 ```
 
-Key files:
+A source fingerprint is generated using:
 
-| File | Purpose |
-| --- | --- |
-| `scripts/run_pipeline.py` | Main local runner with `local`, `json`, and `api` modes |
-| `scripts/run_json_pipeline.py` | JSON object-store flow wrapper |
-| `scripts/run_api_pipeline.py` | Provider API flow wrapper |
-| `pipeline/json_source_state.py` | JSON source readiness and fingerprint state |
-| `pipeline/api_ingest.py` | Generic interval API extraction and raw landing |
-| `pipeline/raw.py` | Raw JSON schema validation and Parquet conversion |
-| `pipeline/staging.py` | Canonical staging table build |
-| `warehouse/marts.sql` | Dimensional model and facts |
-| `warehouse/core.sql` | BI-facing views |
-| `warehouse/data_quality.sql` | Data-quality checks and exceptions |
-| `warehouse/reconciliation.sql` | Reconciliation summary and history |
-| `dags/json_source_dag.py` | Airflow JSON source DAG |
-| `dags/api_source_dag.py` | Airflow API source DAG |
+- file name
+- file size
+- content hash
 
-## Data Model
 
-| Layer | Relation(s) | Purpose |
-| --- | --- | --- |
-| Staging | `staging.int_customers`, `staging.int_stores`, `staging.int_products`, `staging.int_orders`, `staging.int_order_items`, `staging.int_deliveries` | Cleaned and deduplicated source-aligned tables |
-| Dimensions | `marts.dim_customer`, `marts.dim_store`, `marts.dim_product`, `marts.dim_date`, `marts.dim_channel`, `marts.dim_payment_method`, `marts.dim_promo` | Shared reporting dimensions |
-| Facts | `marts.fact_orders`, `marts.fact_order_items`, `marts.fact_deliveries` | Order, item, and delivery grain facts |
-| Views | `core.vw_sales_performance`, `core.vw_delivery_performance`, `core.vw_product_performance`, `core.vw_customer_summary` | BI-facing query layer |
-| Audit | `audit.data_quality_*`, `audit.reconciliation_*` | Quality checks, row-level exceptions, and run history |
+This prevents unnecessary reprocessing of unchanged source files.
 
-## Running The Pipeline
+Example:
 
-Prerequisites:
+```
+Previous Run
 
-- Python 3.12 or a compatible local Python runtime
-- Docker Desktop for MinIO and Airflow runs
-- Project dependencies installed from `requirements.txt` when running outside Docker
+orders.json
+hash = abc123
 
-Install local dependencies:
+
+Current Run
+
+orders.json
+hash = abc123
+
+
+Result:
+
+No change detected
+Pipeline skipped
+```
+
+---
+
+# Stage 2 — Raw Data Landing
+
+Validated files are copied into MinIO object storage.
+
+The raw layer maintains the original source representation before transformation.
+
+Example:
+
+```
+MinIO
+
+rawjson/
+
+├── customers/
+│
+├── stores/
+│
+├── products/
+│
+├── orders/
+│
+├── order_items/
+│
+└── deliveries/
+```
+
+Benefits:
+
+- source preservation
+- recovery capability
+- audit history
+- separation between ingestion and transformation
+
+---
+
+# Stage 3 — Data Processing and Conversion
+
+Raw JSON files are processed through validation and conversion steps.
+
+The process performs:
+
+- schema validation
+- required field checks
+- datatype validation
+- transformation preparation
+- JSON-to-Parquet conversion
+
+
+Example:
+
+```
+Raw JSON
+
+      |
+      v
+
+Schema Validation
+
+      |
+      v
+
+Parquet Dataset
+
+      |
+      v
+
+Staging Tables
+```
+
+---
+
+# Stage 4 — Staging Transformation
+
+The staging layer creates clean, consistent datasets ready for warehouse modelling.
+
+Transformations include:
+
+- column standardisation
+- duplicate removal
+- business rule application
+- data preparation
+
+
+Example:
+
+```
+staging.int_orders
+
+staging.int_customers
+
+staging.int_products
+
+staging.int_deliveries
+```
+
+The staging layer maintains close alignment with source entities while preparing data for analytical models.
+
+---
+
+# Stage 5 — Warehouse Loading
+
+After staging validation, data is loaded into the dimensional warehouse.
+
+The warehouse contains:
+
+- dimension tables
+- fact tables
+- reporting views
+
+
+The modelling approach follows star schema principles.
+
+Benefits:
+
+- simpler reporting queries
+- reusable business definitions
+- improved analytical performance
+
+---
+
+# 8. Business Rules and Transformations
+
+Business logic is implemented primarily using SQL transformations.
+
+This keeps analytical rules:
+
+- transparent
+- testable
+- easy to maintain
+
+---
+
+## Sales Logic
+
+`order_ts` is treated as the authoritative business timestamp.
+
+It supports:
+
+- daily sales reporting
+- revenue trends
+- customer behaviour analysis
+- product performance analysis
+
+---
+
+## Order Fact
+
+`fact_orders` maintains order-level grain.
+
+Metrics supported:
+
+- total orders
+- revenue
+- average order value
+- payment analysis
+- sales channel performance
+
+---
+
+## Order Item Fact
+
+`fact_order_items` maintains product-level grain.
+
+This avoids incorrect product analysis caused by joining product metrics directly with order-level data.
+
+Supports:
+
+- product revenue
+- quantity analysis
+- category performance
+- best-selling products
+
+---
+
+## Delivery Fact
+
+`fact_deliveries` supports operational reporting.
+
+Metrics include:
+
+- delivery duration
+- SLA compliance
+- delivery delays
+- store delivery performance
+
+---
+
+# 9. Slowly Changing Dimension (SCD Type 2)
+
+The store dimension implements SCD Type 2 history tracking.
+
+The purpose is to preserve historical changes rather than overwrite previous values.
+
+Example:
+
+Before:
+
+```
+Store A
+Location = Lagos
+```
+
+After relocation:
+
+```
+Store A
+Location = Abuja
+```
+
+The warehouse maintains:
+
+```
+Store A | Lagos | Valid From | Valid To
+
+Store A | Abuja | Current
+```
+
+This allows historical reporting based on the correct business state at that point in time.
+
+---
+
+# 10. Data Quality Framework
+
+Data quality checks are executed after warehouse loading.
+
+The framework separates:
+
+- blocking failures
+- non-blocking warnings
+
+
+---
+
+## Blocking Checks
+
+Failures stop the pipeline.
+
+Examples:
+
+- missing primary keys
+- duplicate business identifiers
+- invalid foreign keys
+- incorrect totals
+- invalid delivery values
+
+
+Example:
+
+```
+Delivery record
+
+delivery_id = 123
+
+order_id = NULL
+
+
+Result:
+
+FAILED
+Pipeline stopped
+```
+
+---
+
+## Warning Checks
+
+Warnings do not stop processing.
+
+They remain visible for investigation.
+
+Examples:
+
+- unusual daily order spikes
+- zero-value promotions
+- unexpected business patterns
+
+
+---
+
+## Quality Audit Tables
+
+Results are stored in:
+
+```
+audit.data_quality_results
+
+audit.data_quality_exceptions
+
+audit.data_quality_results_history
+
+audit.data_quality_exceptions_history
+```
+
+Each result contains:
+
+- run identifier
+- check name
+- execution timestamp
+- status
+- exception details
+
+---
+
+# 11. Reconciliation Framework
+
+Reconciliation validates that data remains consistent across pipeline stages.
+
+The process compares:
+
+- source records
+- staging records
+- warehouse records
+- reporting outputs
+
+
+Examples:
+
+## Orders
+
+```
+Source Orders
+
+1000
+
+
+Warehouse Orders
+
+1000
+
+
+Result:
+
+PASS
+```
+
+---
+
+## Deliveries
+
+Validation includes:
+
+- delivery count consistency
+- store distribution
+- delivery status accuracy
+
+
+Failed reconciliation prevents the pipeline from being considered successful.
+
+---
+
+# 12. Metadata and Observability
+
+Operational visibility is an important part of the platform.
+
+The pipeline captures metadata around every execution.
+
+Tracked information includes:
+
+- execution date
+- run ID
+- source processed
+- record counts
+- processing status
+- quality results
+- reconciliation status
+- failure details
+
+
+Example:
+
+```
+Pipeline Start
+
+      |
+
+Generate Run ID
+
+      |
+
+Process Source
+
+      |
+
+Execute Transformations
+
+      |
+
+Run Quality Checks
+
+      |
+
+Store Audit Result
+```
+
+---
+
+# 13. Logging Strategy
+
+The pipeline uses structured logging for operational visibility.
+
+---
+
+## Information Logs
+
+Examples:
+
+```
+Pipeline execution started
+
+Loaded 1000 orders
+
+Converted JSON to Parquet
+
+Quality checks completed
+```
+
+---
+
+## Warning Logs
+
+Examples:
+
+```
+Unexpected order volume increase
+
+Missing optional attribute
+```
+
+---
+
+## Error Logs
+
+Examples:
+
+```
+Schema validation failed
+
+Warehouse load failed
+
+Reconciliation mismatch
+```
+
+---
+
+In a production environment, logs can be integrated with:
+
+- CloudWatch
+- Datadog
+- ELK Stack
+- Grafana Loki
+
+---
+
+# 14. Airflow Orchestration
+
+Apache Airflow manages workflow execution.
+
+Responsibilities include:
+
+- scheduling
+- dependency management
+- retries
+- failure handling
+- monitoring
+
+
+Pipeline workflow:
+
+```
+Validate Source
+
+      |
+
+Land Raw Data
+
+      |
+
+Convert Data
+
+      |
+
+Build Warehouse
+
+      |
+
+Run Quality Checks
+
+      |
+
+Run Reconciliation
+
+      |
+
+Complete Pipeline
+```
+
+---
+
+## Failure Handling
+
+The workflow supports:
+
+- automatic retries
+- task-level logging
+- failure notifications
+- execution monitoring
+
+
+Example:
+
+```
+Task Failure
+
+      |
+
+Retry
+
+      |
+
+Retry Failed
+
+      |
+
+Notify Owner
+```
+
+---
+
+# 15. API Integration Extension
+
+The current assessment implementation is based on operational JSON files.
+
+The API module is included as a future integration pattern.
+
+The purpose is to demonstrate how additional operational sources can be introduced without redesigning the downstream architecture.
+
+Possible future sources:
+
+- delivery providers
+- payment platforms
+- CRM systems
+- third-party marketplaces
+
+
+---
+
+## API Design Pattern
+
+```
+External API
+
+      |
+
+API Extraction Layer
+
+      |
+
+MinIO Raw Storage
+
+      |
+
+Existing Processing Pipeline
+
+      |
+
+Warehouse
+```
+
+---
+
+## API Capabilities Implemented
+
+The adapter supports:
+
+- authentication handling
+- pagination
+- retries
+- rate-limit handling
+- incremental extraction
+- watermark tracking
+- raw response storage
+
+
+The API does not directly load the warehouse.
+
+Instead, it follows the same principle:
+
+> Land first, transform later.
+
+Benefits:
+
+- reproducibility
+- auditability
+- easier debugging
+- consistent downstream processing
+
+---
+
+# 16. Running The Project
+
+## Requirements
+
+- Python 3.12+
+- Docker Desktop
+- Docker Compose
+
+
+Install dependencies:
 
 ```bash
-python3 -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
-### Option 1: Local DuckDB Run
+---
 
-Use this for a direct end-to-end warehouse build without Airflow or MinIO.
+# Local Execution
+
+Run the complete pipeline:
 
 ```bash
-python3 scripts/run_pipeline.py --mode local --fresh
+python scripts/run_pipeline.py --mode local
 ```
 
-The runner builds the DuckDB warehouse from `dataSource/`, runs marts, BI views, quality checks, reconciliation, and writes a timestamped log under:
+---
 
-```text
-logs/pipeline_runs/
+# JSON Pipeline
+
+Run the assessment pipeline:
+
+Process:
+
+```
+JSON Source
+
+|
+
+MinIO
+
+|
+
+Parquet
+
+|
+
+Warehouse
+
+|
+
+Quality Checks
+
+|
+
+Reporting Views
 ```
 
-Use a temporary warehouse path when testing changes:
+---
 
-```bash
-python3 scripts/run_pipeline.py \
-  --mode local \
-  --db /tmp/eatngo_pipeline_test.duckdb \
-  --fresh \
-  --execution-date 2026-07-25 \
-  --run-id local-2026-07-25
-```
+# Airflow Execution
 
-### Option 2: JSON Source Flow
-
-Use this when validating the object-store path for the six normal source files.
-
-```bash
-python3 scripts/run_json_pipeline.py --execution-date 2026-07-25
-```
-
-The JSON flow:
-
-1. Validates the expected six-file drop in `dataSource/`.
-2. Compares the current source fingerprint with the last successful run.
-3. Lands JSON files into MinIO.
-4. Converts raw JSON to Parquet.
-5. Builds staging, marts, quality checks, and reconciliation.
-6. Marks the fingerprint as processed after success.
-
-Fingerprint state is stored at:
-
-```text
-warehouse/source_state/json_source_fingerprint.json
-```
-
-Use `--fresh` only for a deliberate rebuild from unchanged JSON files.
-
-### Option 3: API Source Flow
-
-Use this when pulling a provider feed through the same raw/staging/warehouse path.
-
-```bash
-python3 scripts/run_api_pipeline.py \
-  --execution-date 2026-07-25 \
-  --api-provider delivery_partner \
-  --api-source deliveries_api \
-  --api-target-source deliveries \
-  --api-base-url https://api.provider.example.com \
-  --api-data-path /v1/deliveries \
-  --api-token-path /oauth/token \
-  --api-client-id "$DELIVERY_API_CLIENT_ID" \
-  --api-client-secret "$DELIVERY_API_CLIENT_SECRET"
-```
-
-For controlled backfills:
-
-```bash
-python3 scripts/run_api_pipeline.py \
-  --execution-date 2026-07-25 \
-  --api-interval-start 2026-07-25T00:00:00Z \
-  --api-interval-end 2026-07-25T01:00:00Z
-```
-
-API extraction writes two raw artifacts:
-
-- `rawapi/.../page-00001.json`: provider response pages with request metadata
-- `rawjson/ingestion_date=<date>/deliveries.json`: normalized source-contract records for the shared converter
-
-The local FastAPI provider simulator is documented separately in `api/README.md`.
-
-### Option 4: Airflow Stack
-
-Use this when testing orchestration, branching, object-store integration, and email notification.
-
-Start the initialization task first:
+Start services:
 
 ```bash
 docker compose up airflow-init
-```
 
-Then start the stack:
-
-```bash
 docker compose up -d
 ```
 
 Airflow UI:
 
-```text
-http://127.0.0.1:8080
+```
+http://localhost:8080
 ```
 
-DAGs:
+---
 
-| DAG | Purpose | Schedule |
-| --- | --- | --- |
-| `eat_ngo_json_source_pipeline` | Six-file JSON source flow | Daily at 08:00 UTC by default |
-| `eat_ngo_api_source_pipeline` | Provider/API source flow | Manual unless `EAT_NGO_API_SCHEDULE` is set |
+# 17. Repository Structure
 
-The DAGs use branching for no-work cases and can send success/failure email when SMTP settings and `AIRFLOW_ALERT_EMAIL` are configured.
+```
+.
 
-## Configuration
-
-Core settings:
-
-| Variable | Default | Notes |
-| --- | --- | --- |
-| `WAREHOUSE_DB` | `warehouse/eat_ngo_dw.duckdb` locally, `/opt/airflow/warehouse/eat_ngo_dw.duckdb` in Airflow | DuckDB warehouse path |
-| `MINIO_ENDPOINT` | from `.env` | MinIO endpoint for object-store flows |
-| `MINIO_ACCESS_KEY` | from `.env` | MinIO access key |
-| `MINIO_SECRET_KEY` | from `.env` | MinIO secret key |
-| `MINIO_SECURE` | `false` | Set to `true` for TLS |
-
-JSON settings:
-
-| Variable | Default | Notes |
-| --- | --- | --- |
-| `EAT_NGO_JSON_SOURCE_PATH` | `/opt/airflow/dataSource` in Airflow | Mounted JSON source folder |
-| `EAT_NGO_JSON_STATE_PATH` | `warehouse/source_state/json_source_fingerprint.json` | JSON fingerprint state |
-| `EAT_NGO_JSON_SCHEDULE` | `0 8 * * *` | Airflow JSON DAG schedule |
-
-API settings:
-
-| Variable | Default | Notes |
-| --- | --- | --- |
-| `DELIVERY_API_BASE_URL` / `API_BASE_URL` | unset | Provider API base URL |
-| `DELIVERY_API_DATA_PATH` / `API_DATA_PATH` | `/v1/deliveries` | Provider data endpoint |
-| `DELIVERY_API_TOKEN_PATH` / `API_TOKEN_PATH` | `/oauth/token` | OAuth token path |
-| `DELIVERY_API_CLIENT_ID` / `API_CLIENT_ID` | unset | OAuth client id |
-| `DELIVERY_API_CLIENT_SECRET` / `API_CLIENT_SECRET` | unset | OAuth client secret |
-| `DELIVERY_API_AUTH_TYPE` / `API_AUTH_TYPE` | `oauth_client_credentials` | `oauth_client_credentials`, `bearer`, or `none` |
-| `DELIVERY_API_STORE_IDS` / `API_STORE_IDS` | unset | Optional comma-separated store ids |
-| `DELIVERY_API_PAGINATION_STYLE` / `API_PAGINATION_STYLE` | `page` | `page` or `cursor` |
-| `DELIVERY_API_PAGE_SIZE_PARAM_NAME` / `API_PAGE_SIZE_PARAM_NAME` | `page_size` | Provider page-size parameter |
-| `DELIVERY_API_HAS_MORE_KEY` / `API_HAS_MORE_KEY` | `has_more` | Supports dot paths such as `pagination.has_more` |
-| `DELIVERY_API_CURSOR_RESPONSE_KEY` / `API_CURSOR_RESPONSE_KEY` | `next_cursor` | Supports dot paths such as `pagination.next_cursor` |
-| `EAT_NGO_API_SCHEDULE` | manual | Airflow API DAG schedule |
-
-Notification settings:
-
-| Variable | Notes |
-| --- | --- |
-| `AIRFLOW_ALERT_EMAIL` | Comma-separated success/failure email recipients |
-| `SMTP_MAIL_FROM` | Sender address |
-| `SMTP_USER` | SMTP username |
-| `SMTP_PASSWORD` | SMTP password or app password |
-
-## Quality And Reconciliation
-
-Quality checks are defined in:
-
-```text
-warehouse/data_quality.sql
+├── api/
+│
+├── dags/
+│
+├── dataSource/
+│
+├── docs/
+│
+├── pipeline/
+│
+├── scripts/
+│
+├── warehouse/
+│
+├── docker-compose.yaml
+│
+└── README.md
 ```
 
-Results and exceptions are written to:
+---
 
-- `audit.data_quality_results`
-- `audit.data_quality_exceptions`
-- `audit.data_quality_results_history`
-- `audit.data_quality_exceptions_history`
-- `audit.vw_data_quality_exception_summary`
+# 18. Production Considerations
 
-Reconciliation is defined in:
+The current implementation is designed for a local BI engineering environment.
 
-```text
-warehouse/reconciliation.sql
-```
+For production deployment:
 
-It compares staging outputs to reporting outputs overall and by store, channel, product, promotion, and delivery-store. Reconciliation history is retained in `audit.reconciliation_summary_history`.
+---
 
-`ERROR` findings block the pipeline. `WARN` findings load but remain visible for investigation.
+## Metadata Storage
 
-## Testing
+Current:
 
-Run the full test suite:
+- DuckDB metadata tables
+- local state files
 
-```bash
-pytest -q
-```
 
-Run formatting and linting:
+Production:
 
-```bash
-ruff format --check pipeline scripts api dags
-ruff check pipeline scripts api dags
-```
+- PostgreSQL metadata database
 
-Validate Airflow DAG parsing:
 
-```bash
-docker compose exec -T airflow-scheduler airflow dags list
-docker compose exec -T airflow-scheduler airflow dags show eat_ngo_json_source_pipeline
-docker compose exec -T airflow-scheduler airflow dags show eat_ngo_api_source_pipeline
-```
+Benefits:
 
-## Troubleshooting
+- concurrency
+- stronger recovery
+- operational reporting
 
-| Symptom | Likely cause | Action |
-| --- | --- | --- |
-| JSON DAG skips immediately | Source folder is missing, empty, or unchanged | Check `EAT_NGO_JSON_SOURCE_PATH`; use `--fresh` only for intentional rebuilds |
-| JSON DAG fails before loading | One or more required JSON files is missing | Restore the six-file drop in `dataSource/` |
-| API DAG skips immediately | Provider base URL is not configured | Set `DELIVERY_API_BASE_URL` or `API_BASE_URL` |
-| API interval returns no warehouse refresh | Provider returned zero records | Check the API manifest and interval; this is a successful no-work run |
-| API extraction fails authentication | Auth settings are incomplete | Check auth type, token path, client id, client secret, or bearer token |
-| MinIO tasks cannot connect | MinIO settings or Docker network are wrong | Confirm `.env`, `docker compose ps`, and `MINIO_ENDPOINT=minio:9000` |
-| Airflow does not show new DAG behavior | Containers are using an older image or DAG processor has not refreshed | Rebuild and recreate Airflow services |
+---
 
-## If This Moved To Production
+## Storage
 
-The first changes I would make are:
+Current:
 
-- Move JSON fingerprint state, API watermarks, run manifests, and source-processing history into a transactional metadata store such as PostgreSQL. Files are acceptable for a local project, but production recovery, reruns, and operations need queryable state.
-- Store raw and staged data in managed object storage with lifecycle policies, encryption, bucket-level access controls, and clear retention rules for provider payloads.
-- Replace local DuckDB as the serving warehouse with a managed analytical warehouse when concurrency, access control, or BI tool integration requires it.
-- Add stronger orchestration controls: single-run locking per source, explicit backfill parameters, rerun approvals, task-level SLAs, and concurrency limits.
-- Move secrets and API credentials into a secrets manager instead of environment files.
-- Expand alerting beyond email to an operational channel with severity routing, ownership, and escalation for failed quality checks or missed provider intervals.
-- Version source contracts and data-quality expectations so vendor schema changes are reviewed before they affect reporting tables.
-- Add more SCD2 store attributes once the business source of truth is confirmed, such as region, opening status, ownership group, and store format.
-- Add automated lineage and freshness monitoring for core reporting views, especially order volume, delivery completeness, and API watermark lag.
-- Separate CI validation from runtime orchestration by running unit tests, SQL checks, DAG import checks, and container builds before deployment.
+- MinIO
+
+
+Production alternatives:
+
+- Amazon S3
+- Azure Data Lake Storage
+- Google Cloud Storage
+
+
+Additional controls:
+
+- encryption
+- lifecycle policies
+- access control
+- retention management
+
+---
+
+## Warehouse
+
+Current:
+
+- DuckDB
+
+
+Suitable because:
+
+- dataset size is manageable
+- local analytical workloads are efficient
+
+
+Production alternatives:
+
+- Snowflake
+- BigQuery
+- Redshift
+- Azure Synapse
+
+
+---
+
+## Secrets Management
+
+Current:
+
+- environment variables
+
+
+Production:
+
+- AWS Secrets Manager
+- Azure Key Vault
+- Hashicorp Vault
+
+
+---
+
+## Monitoring Improvements
+
+Future enhancements:
+
+- SLA monitoring
+- freshness checks
+- alert escalation
+- operational dashboards
+- incident management integration
+
+
+---
+
+## CI/CD Improvements
+
+A production deployment pipeline should include:
+
+- automated testing
+- SQL validation
+- DAG validation
+- container testing
+- deployment approvals
+
+
+---
+
+# Conclusion
+
+This project demonstrates a complete BI engineering workflow from source ingestion to analytical reporting.
+
+The design focuses on:
+
+- reliable ingestion
+- layered data architecture
+- dimensional modelling
+- data quality assurance
+- operational visibility
+- future extensibility
+
+The result is an auditable and maintainable analytical platform capable of supporting restaurant business intelligence requirements.
+
+---

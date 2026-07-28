@@ -120,7 +120,7 @@ class EatNGoAPIClient:
 class EatNGoOrchestrator:
     def __init__(self, db_path: str = "warehouse.duckdb"):
         self.db_path = db_path
-        self.s3_bucket = os.getenv("S3_BUCKET_NAME", "raw-landing")
+        self.s3_bucket = os.getenv("S3_BUCKET_NAME", "rawapi")
         self.s3_client = boto3.client(
             "s3",
             endpoint_url=os.getenv("S3_ENDPOINT_URL", "http://localhost:9000"),
@@ -168,7 +168,8 @@ class EatNGoOrchestrator:
         s3_keys = []
 
         for idx, page in enumerate(pages, start=1):
-            s3_key = f"rawapi/provider=eatngo/source=deliveries/ingestion_date={now.strftime('%Y-%m-%d')}/page_{run_ts}_p{idx}.json"
+            # Clean object key without duplicated bucket prefix
+            s3_key = f"provider=eatngo/source=deliveries/ingestion_date={now.strftime('%Y-%m-%d')}/page_{run_ts}_p{idx}.json"
             self.s3_client.put_object(
                 Bucket=self.s3_bucket,
                 Key=s3_key,
@@ -183,9 +184,12 @@ class EatNGoOrchestrator:
     def process_and_load_warehouse(self):
         """Reads JSON from S3 into DuckDB and deduplicates latest state using QUALIFY."""
         with self._get_db_connection() as conn:
+            endpoint = os.getenv("S3_ENDPOINT_URL", "http://localhost:9000").replace("http://", "").replace("https://", "").strip("/")
+
             conn.execute("INSTALL httpfs; LOAD httpfs;")
-            conn.execute(f"SET s3_endpoint='{os.getenv('S3_ENDPOINT_URL', 'localhost:9000').replace('http://', '')}';")
+            conn.execute(f"SET s3_endpoint='{endpoint}';")
             conn.execute("SET s3_use_ssl=false;")
+            conn.execute("SET s3_url_style='path';")
             conn.execute(f"SET s3_access_key_id='{os.getenv('AWS_ACCESS_KEY_ID', 'minioadmin')}';")
             conn.execute(f"SET s3_secret_access_key='{os.getenv('AWS_SECRET_ACCESS_KEY', 'minioadmin')}';")
 
@@ -207,9 +211,9 @@ class EatNGoOrchestrator:
             """)
 
             logger.info("Extracting and deduplicating raw JSON payloads in DuckDB...")
-            s3_path_pattern = f"s3://{self.s3_bucket}/rawapi/provider=eatngo/source=deliveries/*/*.json"
+            # Explicit wildcard pattern matching provider=eatngo/source=deliveries/ingestion_date=YYYY-MM-DD/*.json
+            s3_path_pattern = f"s3://{self.s3_bucket}/provider=eatngo/*/*/*.json"
             
-            # Reads from nested payload 'data' array in raw JSON envelope
             dedup_query = f"""
                 CREATE OR REPLACE TEMP TABLE temp_staged_deliveries AS
                 SELECT 
@@ -236,7 +240,6 @@ class EatNGoOrchestrator:
             """
             conn.execute(dedup_query)
 
-            # Upsert into DuckDB target warehouse
             conn.execute("""
                 MERGE INTO fact_deliveries AS target
                 USING temp_staged_deliveries AS src
@@ -253,6 +256,7 @@ class EatNGoOrchestrator:
             """)
             logger.info("Successfully merged records into DuckDB `fact_deliveries`.")
 
+            
     def reconcile(self, vendor_summary: Dict[str, Any]):
         """Reconciles total metrics between DuckDB warehouse and API summary."""
         with self._get_db_connection() as conn:
